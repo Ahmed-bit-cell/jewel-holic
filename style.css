@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(135deg, #f5f0e6, #e6d3a3);
+    color: #3e2c23;
+}
+
+/* الهيدر */
+header {
+    background: linear-gradient(90deg, #3e2c23, #000);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* اللوجو */
+#logo {
+    font-size: 80px;
+    color: #d4af37;
+    letter-spacing: 8px;
+    text-shadow: 0 0 15px #d4af37, 0 0 30px #b8962e;
+}
+
+/* cursor */
+#logo::after {
+    content: "";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* المنتجات */
+.products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+/* الكارد */
+.card {
+    background: #f5f0e6;
+    width: 260px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0, 2);
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 150px;
+    border-radius: 10px;
+    border: 2px solid #d4af37;
+}
+
+.price {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* الزر */
+button {
+    background: linear-gradient(45deg, #d4af37, #b8962e);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: black;
+    color: #d4af37;
+}
+
+/* الفورم */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.form-box {
+    background: white;
+    width: 320px;
+    margin: 120px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fade 0.4s;
+}
+
+@keyframes fade {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+
+    #logo {
+        font-size: 40px;
+        letter-spacing: 4px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    header {
+        padding: 30px 10px;
+    }
+}
+
+/* الهيدر الرئيسي */
+header {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    background: url("photo_٢٠٢٦-٠٥-٠١_١٥-٠٨-٠٧.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* طبقة تغميق عشان الكلام يبان */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* اللوجو فوق الصورة */
+#logo {
+    position: relative;
+    z-index: 1;
+
+    color: #d4af37;
+    font-size: 80px;
+    letter-spacing: 6px;
+    text-shadow: 0 0 20px #d4af37;
+}
