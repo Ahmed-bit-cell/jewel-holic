@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order</title>
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background: #f5f0e6;
             text-align: center;
             padding: 50px;
@@ -16,49 +17,54 @@
 
         .form-box {
             background: white;
-            padding: 30px;
-            width: 300px;
+            max-width: 400px;
             margin: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         input {
-            width: 90%;
+            width: 100%;
+            padding: 12px;
             margin: 10px 0;
-            padding: 10px;
+            border: 1px solid #d4af37;
+            border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
         }
 
         button {
-            background: #d4af37;
+            background: linear-gradient(45deg, #d4af37, #b8962e);
             border: none;
-            padding: 10px 20px;
+            padding: 12px 20px;
             cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            border-radius: 30px;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #c4a030, #a88620);
+        }
+
+        h2 {
+            color: #3e2c23;
         }
     </style>
-
 </head>
 
 <body>
-
     <div class="form-box">
         <h2>Complete Your Order</h2>
 
-        <input type="text" id="name" placeholder="Your Name">
-        <input type="text" id="phone" placeholder="Phone Number">
-        <input type="text" id="address" placeholder="Address">
+        <button onclick="window.location.href='https://wa.me/201021702269?text=Can I Make An Order'">Confirm Order
+        </button>
 
-        <button onclick="sendOrder()">Confirm Order</button>
     </div>
-
-    <script>
-        function sendOrder() {
-            alert("تم استلام الطلب ✅");
-        }
-    </script>
-
     <script src="script.js"></script>
-
 </body>
 
 </html>

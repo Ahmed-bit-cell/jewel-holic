@@ -7,6 +7,7 @@ body {
 
 /* الهيدر */
 header {
+    width: 100%;
     background: linear-gradient(90deg, #3e2c23, #000);
     text-align: center;
     padding: 50px 20px;
@@ -189,4 +190,39 @@ header::before {
     font-size: 80px;
     letter-spacing: 6px;
     text-shadow: 0 0 20px #d4af37;
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial;
+    background: #f5f0e6;
+    text-align: center;
+    padding: 50px;
+}
+
+.form-box {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    background: #d4af37;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }

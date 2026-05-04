@@ -32,36 +32,14 @@ let params = new URLSearchParams(window.location.search);
 let product = params.get("product");
 let price = params.get("price");
 
-// Send order
-function sendOrder() {
 
-    let name = document.getElementById("name").value.trim();
-    let phone = document.getElementById("phone").value.trim();
-    let address = document.getElementById("address").value.trim();
 
-    // Validation
-    if (!name || !phone || !address) {
-        alert("Please fill in all fields!");
-        return;
-    }
 
-    if (phone.length !== 11) {
-        alert("Phone number must be 11 digits!");
-        return;
-    }
 
-    let message = `
-New Order from JEWEL HOLIC:
-Product: ${product || "Not specified"}
-Price: ${price || "Not specified"}
-Name: ${name}
-Customer Phone: ${phone}
-Address: ${address}
-`;
 
-    let ownerNumber = "201021702269"; // 👈 put your WhatsApp number
+let ownerNumber = "201021702269";
 
-    let url = "https://wa.me/" + ownerNumber + "?text=" + encodeURIComponent(message);
+let url = "https://wa.me/201021702269" + "?text=" + message;
 
-    window.open(url, "_blank");
-}
+// Open WhatsApp
+window.location.href = "https://wa.me/201021702269?text=" + encodeURIComponent(message);
