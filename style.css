@@ -13,6 +13,22 @@ header {
     padding: 50px 20px;
 }
 
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container img {
+    width: 100%;
+    display: block;
+}
+
 /* اللوجو */
 #logo {
     font-size: 80px;
